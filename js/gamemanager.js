@@ -21,7 +21,7 @@ let GameManager = {
         }
 
         let getInterface = document.querySelector(".interface");
-        getInterface.innerHTML = '<img src="image/'+ classType.lowercase() + ' .png" class="img-avatar"><div><h3>'+ classType + '</h3><p> Health: '+ player.health + ' </p><p> Mana: ' + player.mana + ' </p><p> Strenght: ' + player.strenght + ' </p><p> Agility: ' + player.agility + ' </p><p> Speed: ' + player.speed + ' </p></div>';
+        getInterface.innerHTML = '<img src="imag  e/'+ classType.lowercase() + ' .png" class="img-avatar"><div><h3>'+ classType + '</h3><p> Health: '+ player.health + ' </p><p> Mana: ' + player.mana + ' </p><p> Strenght: ' + player.strenght + ' </p><p> Agility: ' + player.agility + ' </p><p> Speed: ' + player.speed + ' </p></div>';
 
     
     }
