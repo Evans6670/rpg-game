@@ -1,7 +1,7 @@
 let GameManager = {
     setGameStart: function(classType){
         this.resetPlayer(classType);
-        this.setPrefight();
+        this.setPreFight();
     },
     resetPlayer: function(classType){
         switch(classType){
@@ -24,5 +24,32 @@ let GameManager = {
         getInterface.innerHTML = '<img src="image/' + classType.toLowerCase() + '.png" class="imgage"><div><h3>' + classType + '</h3><p> Health: '+ player.health + ' </p><p> Mana: ' + player.mana + ' </p><p> Strenght: ' + player.strenght + ' </p><p> Agility: ' + player.agility + ' </p><p> Speed: ' + player.speed + ' </p></div>';
 
     
+    },
+    setPreFight: function(){
+        let getHeader = document.querySelector(".header");
+        let getActions = document.querySelector(".actions");
+        let getArena = document.querySelector(".arena");
+        getHeader.innerHTML = '<p>Task: Find an enemy!</p>';
+        getActions.innerHTML = '<a href = "#" class="bnt-preFight" onlick = "GameManager.setFight()"> search for enemy!</a>';
+        getArena.style.visibility = "visible";
+
+    },
+
+    setFight: function() {
+        let getHeader = document.querySelector(".header");
+        let getActions = document.querySelector(".actions");
+        let getArena = document.querySelector(".arena");
+        //creat enemy
+        let enemy00 = new Enemy("Goblin", 100, 0, 50, 100, 100);
+        let enemy01 = new Enemy("Troll", 200, 0, 150, 80, 150);
+        let chooseRandomEnemy = math.floor(math.random() * math.floor(2));
+        switch (chooseRandomEnemy){
+            case 0:
+                enemy = enemy00;
+                break;
+            case 1:
+                enemy = enemy01;
+                break;    
+        }
     }
 }
