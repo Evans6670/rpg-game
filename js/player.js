@@ -1,4 +1,4 @@
-let palyer;
+let Player;
 function player(classType, health, mana, strenght, agility, speed){
     this.classType = classType;
     this.health = health;

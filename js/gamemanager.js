@@ -15,7 +15,7 @@ let GameManager = {
                 player = new player(classType, 80, 0, 50, 200, 50);
                 break;
             case "Hunter":
-                player = new player(classType,200, 0, 50, 200, 100);
+                player = new player(classType, 200, 0, 50, 200, 100);
                 break;
 
         }
@@ -30,7 +30,7 @@ let GameManager = {
         let getActions = document.querySelector(".actions");
         let getArena = document.querySelector(".arena");
         getHeader.innerHTML = '<p>Task: Find an enemy!</p>';
-        getActions.innerHTML = '<a href = "#" class="bnt-preFight" onlick = "GameManager.setFight()"> search for enemy!</a>';
+        getActions.innerHTML = '<a href ="#" class="bnt-preFight" onlick = "GameManager.setFight()"> search for enemy!</a>';
         getArena.style.visibility = "visible";
 
     },
@@ -51,9 +51,10 @@ let GameManager = {
                 enemy = enemy01;
                 break;    
         }
+
         getHeader.innerHTML = '<p>Task: choose your move! </p>';
-        getActions.innerHTML = '<a href = "#" class ="btn-preFight" onclick ="playerMoves.calcAttack()">Attack! </a>';
-        getEnemy.innerHTML = '< img src="image/'+ enemy.enemyType.toLowerCase() + '.png" alt= "' + enemy.enemyType + '" class = "image-avatar"><div><h3>'+ enemy.enemyType + '</h3><p class="health-enemy">Health: ' + enemy.health +'</p><p>Mana: ' +enemy.mana + '</p>><p>Strenght: ' + enemy.strenght + '</p><p>Agility: ' + enemy.agility + '</p><p>Speed: ' + enemy.speed + '</p></div>';
+        getActions.innerHTML = '<a href ="#" class ="btn-preFight" onclick ="playerMoves.calcAttack()">Attack!</a>';
+        getEnemy.innerHTML = '< img src="image/enemies/' + Enemy.enemyType.toLowerCase() + '.png" alt= "' + Enemy.enemyType + '" class = "image-avatar"><div><h3>'+ Enemy.enemyType + '</h3><p class="health-enemy">Health: ' + Enemy.health + '</p><p>Mana: ' + Enemy.mana + '</p>><p>Strenght: ' + Enemy.strenght + '</p><p>Agility: ' + Enemy.agility + '</p><p>Speed: ' + Enemy.speed + '</p></div>';
 
     }
 }
