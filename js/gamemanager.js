@@ -38,7 +38,7 @@ let GameManager = {
     setFight: function() {
         let getHeader = document.querySelector(".header");
         let getActions = document.querySelector(".actions");
-        let getArena = document.querySelector(".arena");
+        let getEnemy = document.querySelector(".enemy");
         //creat enemy
         let enemy00 = new Enemy("Goblin", 100, 0, 50, 100, 100);
         let enemy01 = new Enemy("Troll", 200, 0, 150, 80, 150);
@@ -51,5 +51,9 @@ let GameManager = {
                 enemy = enemy01;
                 break;    
         }
+        getHeader.innerHTML = '<p>Task: choose your move! </p>';
+        getActions.innerHTML = '<a href = "#" class ="btn-preFight" onclick ="playerMoves.calcAttack()">Attack! </a>';
+        getEnemy.innerHTML = '< img src="image/'+ enemy.enemyType.toLowerCase() + '.png" alt='
+
     }
 }
